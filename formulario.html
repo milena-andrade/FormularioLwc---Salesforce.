@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Formulário" icon-name="action:new_note" >
+
+        <div class="slds-var-m-around_medium">
+            <lightning-input name="nomeCompleto" label="Nome Completo" onchange={handleEvento}></lightning-input>
+            <lightning-input type="tel" name="telefone" label="Telefone" onchange={handleEvento}></lightning-input>
+            <lightning-input type="email" name="email" label="Email" onchange={handleEvento}></lightning-input>
+        </div>
+
+        <div   style="padding:10px">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td>Nome Completo : </td>
+                        <td>{nomeCompleto}</td>
+                    </tr>
+
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Email : </td>
+                    <td>{email}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Telefone : </td>
+                    <td>{telefone}</td>
+                </tr>
+            </tfoot>
+            </table>
+        </div>
+
+    </lightning-card>
+
+</template>
